@@ -29,5 +29,8 @@ public class ConsoleExercises {
         Scanner sentenceScanner = new Scanner(System.in);
         System.out.println("Welcome to Code-up!!!");
         String sentence = sentenceScanner.next();
+
     }
-}
+
+    }
+
