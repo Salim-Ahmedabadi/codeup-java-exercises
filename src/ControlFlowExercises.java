@@ -41,15 +41,30 @@ public class ControlFlowExercises {
 //
 //                } while (i > -10);
 //                }}
+//        long i = 2;
+//        do {
+//            i *= i;
+//            System.out.println(Math.sqrt(i));
+//
+//                } while (i < 1000000);
+//                }}
 
-        int i = 1;
-        do {
-                i*=2;
+        for (int i = 1; i < 100; i++) {
+             if (i % 3 == 0 && i % 5 == 0)
+                System.out.println("FizzBuzz");
+            else if (i % 3 == 0)
+                System.out.println("Fizz");
+            else if (i % 5 == 0)
+                System.out.println("Buzz");
 
+            else
                 System.out.println(i);
+        }
+    }
+}
 
-                } while (i < 1000000);
-                }}
+
+
 
 
 
