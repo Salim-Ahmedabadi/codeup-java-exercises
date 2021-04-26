@@ -46,22 +46,38 @@ public class ControlFlowExercises {
 //            i *= i;
 //            System.out.println(Math.sqrt(i));
 //
-//                } while (i < 1000000);
-//                }}
+//        } while (i < 1000000);
+//    }
 
-        for (int i = 1; i < 100; i++) {
-             if (i % 3 == 0 && i % 5 == 0)
-                System.out.println("FizzBuzz");
-            else if (i % 3 == 0)
-                System.out.println("Fizz");
-            else if (i % 5 == 0)
-                System.out.println("Buzz");
 
-            else
-                System.out.println(i);
+//        for (int i = 1; i < 31; i++) {
+//             if (i % 3 == 0 && i % 5 == 0)
+//                System.out.println("FizzBuzz");
+//            else if (i % 3 == 0)
+//                System.out.println("Fizz");
+//            else if (i % 5 == 0)
+//                System.out.println("Buzz");
+//
+//            else
+//                System.out.println(i);
+//        }
+//    }
+//}
+
+        Scanner userInt = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int userInput = userInt.nextInt();
+
+        System.out.println("Number  Squared    Cubed");
+        for (long y = 1; y <= userInput; y++) {
+            long y2 = y * y;
+            long y3 = y * y * y;
+
+            System.out.printf("%-10d %-10d %-10d\n", y, y2 , y3);
         }
     }
 }
+
 
 
 
