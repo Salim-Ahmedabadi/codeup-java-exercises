@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 public class ControlFlowExercises {
 
@@ -64,19 +65,57 @@ public class ControlFlowExercises {
 //    }
 //}
 
-        Scanner userInt = new Scanner(System.in);
-        System.out.print("Enter an integer: ");
-        int userInput = userInt.nextInt();
+//        Scanner userInt = new Scanner(System.in);
+//        System.out.print("Enter an integer: ");
+//        int userInput = userInt.nextInt();
+//
+//        System.out.println("Number  Squared    Cubed");
+//        for (long y = 1; y <= userInput; y++) {
+//            long y2 = y * y;
+//            long y3 = y * y * y;
+//
+//            System.out.printf("%-10d %-10d %-10d\n", y, y2, y3);
 
-        System.out.println("Number  Squared    Cubed");
-        for (long y = 1; y <= userInput; y++) {
-            long y2 = y * y;
-            long y3 = y * y * y;
+//
+        Scanner sc = new Scanner(System.in);
+        boolean confirm;
+        do {
+            System.out.println("Enter your grade: ");
+            int userGrade = sc.nextInt();
+            if (userGrade >= 88) {
+                System.out.print("Hey! you got an: A");
+            } else if (userGrade >= 80) {
+                System.out.print("Hey! you got an: B");
+            } else if (userGrade >= 67) {
+                System.out.print("You got an: C");
+            } else if (userGrade >= 60) {
+                System.out.print("Sorry, You got an: D");
+            } else if (userGrade >= 0) {
+                System.out.print("Sorry, You got an: F");
+            }
+            System.out.println(" Would you like to continue?.[y/n]");
+            String userInput = sc.next();
+            confirm = userInput.equalsIgnoreCase("Y");
+        } while (confirm);
+        }}
 
-            System.out.printf("%-10d %-10d %-10d\n", y, y2 , y3);
-        }
-    }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
