@@ -6,9 +6,8 @@ public class MethodExercises {
         System.out.println(Multiplication(2,3));
         System.out.println(Division(2,3));
         System.out.println(Modulas(7,2));
-//        multiplicationLoop(5,5);
         System.out.println(multiplicationLoop(5,5));
-
+        System.out.println(multiplicationRecursion(15,15));
    }
     public static int Addition(int num1, int num2) {
         return num1 + num2;
@@ -25,6 +24,7 @@ public class MethodExercises {
    }public static int Modulas(int num1, int num2) {
             return num1 % num2;
     }
+    //Bonus
         public static int multiplicationLoop(int a, int b) {
         int result = 0;
         for (int i = 0; i < a; i++) {
@@ -33,8 +33,20 @@ public class MethodExercises {
 
             return result;
         }
+//Recursion
+        public static int multiplicationRecursion(int a, int b){
 
-    }
+        if ((a == 0) || (b == 0))
+            return 0;
+        else
+            return(a + multiplicationRecursion(a, b - 1));
+        }
+
+}
+
+
+
+
 
 
 
