@@ -1,5 +1,6 @@
 import javax.lang.model.SourceVersion;
 import java.util.Scanner;
+import java.util.Random;
 public class MethodExercises {
     public static void main(String[] args) {
 //        System.out.println(Addition(2,3));
@@ -11,9 +12,11 @@ public class MethodExercises {
 //        System.out.println(multiplicationRecursion(15,15));
 //        System.out.print("Enter a number between 1 and 10: ");
 //        int userInput = getInteger(1, 10);
-        factorial();
+//        factorial();
 
-   }
+
+
+    }
 //    public static int Addition(int num1, int num2) {
 //        return num1 + num2;
 //
@@ -64,35 +67,51 @@ public class MethodExercises {
 //    return getInteger(min, max);
 //}
 //3.
-    public static void factorial() {
-        int number;
-        System.out.println("Enter the number between 1 and 10 ");
-        Scanner scanner = new Scanner(System.in);
-        number = scanner.nextInt();
-
-        if(number <= 10 && number >= 1) {
-            long fact = 1;
-            int i = 1;
-            while (i <= number) {
-                fact = fact * i;
-                i++;
-            }
+//public static void factorial() {
+//    int number;
+//    System.out.println("Enter the number between 1 and 10 ");
+//    Scanner scanner = new Scanner(System.in);
+//    number = scanner.nextInt();
+//
+//    if(number <= 10 && number >= 1) {
+//        long fact = 1;
+//        int i = 1;
+//        while (i <= number) {
+//            fact = fact * i;
+//            i++;
+//        }
 //            scanner.close();
-            System.out.println("Factorial of "+number+" is: "+fact);
-        }else{
-            System.out.println("Try again number between 1 and 10 ");
-            number = scanner.nextInt();
-            factorial();
-            }
+//        System.out.println("Factorial of "+number+" is: "+fact);
+//    }else{
+//        System.out.println("Try again number between 1 and 10 ");
+//        number = scanner.nextInt();
+//        factorial();
+//    }
+//
+//}
+//}
+//
+//4.
+public static void RollTheDice (){
+
+        int die1;
+        int die2;
+        int roll;
+    Scanner diceRoll = new Scanner(System.in);
+    System.out.println("Enter the number between 1 and 12 ");
+    int userNumber = diceRoll.nextInt();
+
+        die1 = (int)(Math.random()*6) + 1;
+        die2 = (int)(Math.random()*6) + 1;
+        roll = die1 + die2;
+    System.out.println("The first roll " + die1);
+    System.out.println("The second roll " + die2);
+    System.out.println("My total roll is " + roll);
+
 
     }
+
 }
-
-
-
-
-
-
 
 
 
