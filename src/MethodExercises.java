@@ -94,18 +94,18 @@ public class MethodExercises {
 //4.
 public static void RollTheDice (){
 
-        int die1;
-        int die2;
+        int dice1;
+        int dice2;
         int roll;
     Scanner diceRoll = new Scanner(System.in);
     System.out.println("Enter the number between 1 and 12 ");
     int userNumber = diceRoll.nextInt();
 
-        die1 = (int)(Math.random()*6) + 1;
-        die2 = (int)(Math.random()*6) + 1;
-        roll = die1 + die2;
-    System.out.println("The first roll " + die1);
-    System.out.println("The second roll " + die2);
+        dice1 = (int)(Math.random()*6) + 1;
+        dice2 = (int)(Math.random()*6) + 1;
+        roll = dice1 + dice2;
+    System.out.println("The first roll " + dice1);
+    System.out.println("The second roll " + dice2);
     System.out.println("My total roll is " + roll);
 
 
