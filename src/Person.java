@@ -4,6 +4,7 @@ public class Person {
         salim.name = "Salim";
         System.out.println(salim.getName());
         System.out.println(salim.setName("Sunny"));
+        salim.sayHello();
     }
 
     private String name;
@@ -19,6 +20,7 @@ public class Person {
         }
         public void sayHello(){
 //TODO: print a message to the console using the person's name
+            System.out.println("Hello " + this.name);
 
         }
     }
