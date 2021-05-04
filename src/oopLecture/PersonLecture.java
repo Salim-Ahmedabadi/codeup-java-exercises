@@ -25,9 +25,9 @@ public class PersonLecture {
         douglas.firstName = "Douglas";
         douglas.lastName = "Hirsh";
 
-//        System.out.println("ken.firstName = " + ken.firstName);
-//        System.out.println("ken.lastName = " + ken.lastName);
-//        System.out.println("ken.joinsChat() = " + ken.joinsChat());
+        System.out.println("ken.firstName = " + ken.firstName);
+        System.out.println("ken.lastName = " + ken.lastName);
+        System.out.println("ken.joinsChat() = " + ken.joinsChat());
 
         //World population + class/object fields
         System.out.println("worldPop = " + PersonLecture.worldPop);
