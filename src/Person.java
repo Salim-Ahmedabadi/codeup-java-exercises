@@ -1,6 +1,10 @@
 public class Person {
+    public Person(String salim) {
+        name = salim;
+    }
+
     public static void main(String[] args){
-        Person salim = new Person();
+        Person salim = new Person("salim");
         salim.name = "Salim";
         System.out.println(salim.getName());
         System.out.println(salim.setName("Sunny"));
