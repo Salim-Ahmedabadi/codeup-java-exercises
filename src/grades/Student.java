@@ -1,59 +1,67 @@
-package grades;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+package grades;
+import com.sun.jdi.Value;
+import java.lang.reflect.Array;
+import java.util.*;
 
 public class Student {
+    public static void main(String[] args){
+
+        Student Bobby = new Student("Bobby");
+        Bobby.addGrade(95);
+        Bobby.addGrade(65);
+        Bobby.addGrade(82);
+        System.out.println("Bobby = " + Bobby);
+        System.out.println("Bobby.grades = " + Bobby.grades);
+        System.out.println("Rob.getGradeAverage() = " + Bobby.getGradeAverage());
+    }
     private String name;
     private ArrayList<Integer> grades;
-    private HashMap<String, String> attendance;
-
-    public Student(String inputName, ArrayList<Integer> inputGrades, HashMap<String, String> inputAttendance) {
-        this.name = inputName;
-        this.grades = inputGrades;
-        this.attendance = inputAttendance;
-    }
-
-    public static void main(String[] args) {
-        ArrayList<Integer> studentOneGrades = new ArrayList<>();
-        studentOneGrades.add(98);
-        studentOneGrades.add(85);
-        studentOneGrades.add(92);
-        HashMap<String, String> studentOneAttendance = new HashMap<String, String>();
-        studentOneAttendance.put("2020-01-06", "Y");
-        studentOneAttendance.put("2020-01-07", "N");
-        studentOneAttendance.put("2020-01-08", "Y");
-        studentOneAttendance.put("2020-01-09", "N");
-        studentOneAttendance.put("2020-01-10", "Y");
-        Student studentOne = new Student("Charles", studentOneGrades, studentOneAttendance);
-        System.out.println("studentOne name: " + studentOne.getName());
-        System.out.println("studentOne average: " + studentOne.getGradeAverage());
-        studentOne.addGrade(78);
-        System.out.println("studentOne average: " + studentOne.getGradeAverage());
-//        System.out.println("studentOne days absent: " + studentOne.getDaysAbsent());
-
-
+    public Student(String name){
+        this.name = name;
+        this.grades = new ArrayList<>();
     }
 
     public String getName() {
-        return this.name;
+        return name;
     }
-
+    public ArrayList<Integer> getGrade() {
+        return grades;
+    }
     public void addGrade(int grade) {
-        this.grades.add(grade);
+        grades.add(grade);
     }
-
-
-    public ArrayList<Integer> getGrades() {
-        return this.grades;
-    }
-
-    public double getGradeAverage() {
-        double sum = 0;
-        for (int grade : grades) {
-            sum += grade;
+    int bucket;
+    public int getGradeAverage() {
+        for (int i = 0 ; i < grades.size(); i++){
+            bucket = bucket + grades.get(i);
         }
-        return sum / grades.size();
-    }}
+        return bucket / grades.size();
+    }
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", grades=" + grades +
+                ", bucket=" + bucket +
+                '}';
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
